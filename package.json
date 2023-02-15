@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/KyaraFrankena/project_tech/issues"
   },
-  "homepage": "https://github.com/KyaraFrankena/project_tech#readme"
+  "homepage": "https://github.com/KyaraFrankena/project_tech#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
