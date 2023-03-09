@@ -1,0 +1,58 @@
+/* Mijn gebruikte fonts. */
+@font-face {
+    font-family: Boowie;
+    src: url(BOOWIE.ttf);
+    font-weight: regular;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-thin.ttf);
+    font-weight: thin;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-SemiBold.ttf);
+    font-weight: semibold;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-Medium.ttf);
+    font-weight: medium;
+}
+/* Einde van gebruikte fonts */
+
+
+body {
+    margin: 0;
+}
+
+main section:nth-of-type(1) img {
+    width: 27em;
+    height: 50em;
+}
+
+main section:nth-of-type(2) img {
+    width: 50%;
+    margin-top: -47em;
+    margin-left: 6.5em;    
+}
+
+main section:nth-of-type(1) a {
+    margin-left: 7em;
+    margin-top: 49em;
+    background-color: #F5F1CC;
+    color: black;
+    font-size: .9em;
+    border: none;
+    opacity: 0.8;
+    border-radius: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-family: BOOWIE;
+    position: fixed;
+}

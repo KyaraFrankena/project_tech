@@ -1,0 +1,82 @@
+/* Mijn gebruikte fonts. */
+@font-face {
+    font-family: Boowie;
+    src: url(BOOWIE.ttf);
+    font-weight: regular;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-thin.ttf);
+    font-weight: thin;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-SemiBold.ttf);
+    font-weight: semibold;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-Medium.ttf);
+    font-weight: medium;
+}
+/* Einde van gebruikte fonts */
+
+
+/* Standaard nodig! */
+body {
+    margin: 0;
+    /* background-image: url(chique3.jpg); */
+    background-image: url("../images/Scandinavian.jpg");
+    background-repeat: no-repeat;
+    background-size: 34em;
+    background-color: #DAD7D0;;
+}
+
+
+header img:nth-of-type(1) {
+    width: 40%;
+    margin-top: 3em;
+    margin-left: 8.5em; 
+}
+
+header img:nth-of-type(2) {
+    width:5%;
+    margin-left: 23em;
+    margin-top: -5.5em;
+} 
+/* Einde standaard! */
+
+main h3 {
+    font-family: Boowie;
+    background-color: white;
+    padding-top: 2em;
+    padding-left: 1.5em;
+    opacity: .8;
+    margin-bottom: 0;
+    margin-top: 11em;
+    margin-left: 7em;
+}
+
+main p {
+    font-family: poppins;
+    font-size: .75em;
+    background-color: white;
+    padding-left: 2.3em;
+    padding-top: 1em;
+    padding-bottom: 23.8em;
+    padding-right: 1.5em;
+    opacity: .8;
+    margin-top: 0;
+    margin-left: 10.9em;
+}
+
+.teksthartje {
+    width: 5%;
+    margin-left: 23em;
+    margin-top: 2.2em;
+    z-index: 2;
+    position: absolute;
+}

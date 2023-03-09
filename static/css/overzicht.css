@@ -1,0 +1,272 @@
+/* Mijn gebruikte fonts. */
+@font-face {
+    font-family: Boowie;
+    src: url(BOOWIE.ttf);
+    font-weight: regular;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-thin.ttf);
+    font-weight: thin;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-SemiBold.ttf);
+    font-weight: semibold;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-Medium.ttf);
+    font-weight: medium;
+}
+/* Einde van gebruikte fonts */
+
+
+/* Body & Header */
+body {
+    background-color: #DAD7D0;
+    margin: 0;
+}
+
+header img:nth-of-type(1) {
+    width: 40%;
+    margin-top: 3em;
+    margin-left: 8.5em; 
+}
+
+header img:nth-of-type(2)  {
+    width:5%;
+    margin-left: 23em;
+    margin-top: -5.5em;
+} 
+/* Einde Body & Header */
+
+
+/* Inleidende tekst */
+main section:nth-of-type(1) h2 {
+    font-family: Boowie;
+    color: #435F50;
+    font-size: 1.2em;
+    margin-left: 1em;
+    margin-top: 1.33em;
+}
+
+main section:nth-of-type(1) p {
+    font-family: poppins;
+    color: #435F50;
+    font-size: .8em;
+    margin-top: -1.2em;
+    margin-left: 1.55em;
+}
+/* Einde inleidende tekst */
+
+
+/* Grid maken */
+main section:nth-of-type(2) ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin: 0;
+    list-style: none;
+    padding: 1em;
+}
+/* Einde grid maken */
+
+
+/* Grid indeling  */
+main section:nth-of-type(2) ul li:nth-of-type(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+main section:nth-of-type(2) ul li:nth-of-type(2) {
+    grid-column-start: 2;
+    grid-column-end: -1;
+}
+
+main section:nth-of-type(2) ul li:nth-of-type(3) {
+    grid-column-start: 2;
+    grid-column-end: -3;
+}
+
+main section:nth-of-type(2) ul li:nth-of-type(4) {
+    grid-column-start: -2;
+    grid-column-end: -1;
+}
+/* Einde grid indeling */
+
+
+/* Afbeeldingen scalen grid */
+main section:nth-of-type(2) ul li:nth-of-type(1) img:nth-of-type(2) {
+    width: 100%;
+}
+
+main section:nth-of-type(2) ul li:nth-of-type(2) img:nth-of-type(2) {
+    width: 100%;
+}
+
+main section:nth-of-type(2) ul li:nth-of-type(3) img:nth-of-type(2) {
+    width: 100%;
+}
+
+main section:nth-of-type(2) ul li:nth-of-type(4) img:nth-of-type(2) {
+    width: 100%;
+}
+/* Einde afbeeldingen scalen grid */
+
+
+/* Hartje positioneren */
+.leeghartje {
+    width: 6%;
+    z-index: 1;
+    position:absolute;
+    margin-left: 9.2em;
+    margin-top:1em;
+}
+
+.leeghartje2 {
+    width: 6%;
+    z-index: 1;
+    position:absolute;
+    margin-left: 9.2em;
+    margin-top:1em;
+}
+
+.leeghartje3 {
+    width: 6%;
+    z-index: 1;
+    position:absolute;
+    margin-left: 9.2em;
+    margin-top:1em;
+}
+
+.leeghartje4 {
+    width: 6%;
+    z-index: 1;
+    position:absolute;
+    margin-left: 9.2em;
+    margin-top:1em;
+} 
+/* Einde hartje positioneren */
+
+
+
+
+/* Tekst op het grid */
+main section:nth-of-type(2) li:nth-of-type(1) div {
+    position: absolute;
+    left: 1em;
+    width: 11.86em;
+    height: 4.5em;
+    display: flex;
+    background-color: white;
+    opacity: .8;
+    top: 25em;
+    z-index: 1;
+    color: black;
+    font-family: poppins;
+}
+
+main section:nth-of-type(2) li:nth-of-type(1) div h3 {
+    font-family: Boowie;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+main section:nth-of-type(2) li:nth-of-type(1) div p {
+    font-family: poppins;
+    font-size: .8em;
+    margin-top: 2.9em;
+    margin-left: -10.8em;
+}
+
+
+
+main section:nth-of-type(2) li:nth-of-type(2) div {
+    position: absolute;
+    left: 13.89em;
+    width: 11.86em;
+    height: 4.5em;
+    display: flex;
+    background-color: white;
+    opacity: .8;
+    top: 25em;
+    z-index: 1;
+    color: black;
+    font-family: poppins;
+}
+
+main section:nth-of-type(2) li:nth-of-type(2) div h3 {
+    font-family: Boowie;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+main section:nth-of-type(2) li:nth-of-type(2) div p {
+    font-family: poppins;
+    font-size: .8em;
+    margin-top: 2.9em;
+    margin-left: -8.6em;
+}
+
+main section:nth-of-type(2) li:nth-of-type(3) div {
+    position: absolute;
+    left: 1em;
+    width: 11.86em;
+    height: 4.5em;
+    display: flex;
+    background-color: white;
+    opacity: .8;
+    top: 44.1em;
+    z-index: 1;
+    color: black;
+    font-family: poppins;
+}
+
+main section:nth-of-type(2) li:nth-of-type(3) div h3 {
+    font-family: Boowie;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+main section:nth-of-type(2) li:nth-of-type(3) div p {
+    font-family: poppins;
+    font-size: .8em;
+    margin-top: 2.9em;
+    margin-left: -7.8em;
+}
+
+main section:nth-of-type(2) li:nth-of-type(4) div {
+    position: absolute;
+    left: 13.89em;
+    width: 11.86em;
+    height: 4.5em;
+    display: flex;
+    background-color: white;
+    opacity: .8;
+    top: 44.1em;
+    z-index: 1;
+    color: black;
+    font-family: poppins;
+}
+
+main section:nth-of-type(2) li:nth-of-type(4) div h3 {
+    font-family: Boowie;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+main section:nth-of-type(2) li:nth-of-type(4) div p {
+    font-family: poppins;
+    font-size: .8em;
+    margin-top: 2.9em;
+    margin-left: -5.6em;
+}
+/* Einde tekst op het grid */
