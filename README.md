@@ -1,7 +1,1 @@
-# project_tech
-
-* [ ] Document how to install the project? 
-
-* [ ] Document what your features does? 
-
-* [ ] If you want to go even further look at what community files you can include in your repo.
+![beeldreadme](https://user-images.githubusercontent.com/112865106/224110657-3446d8f0-1331-45cc-abd6-1244083d7810.png)
