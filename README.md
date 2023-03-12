@@ -1,5 +1,4 @@
-![wikibeeld1](https://user-images.githubusercontent.com/112865106/224551563-916788e8-8d0c-44fe-adc2-9bba03477b97.png)
-
+<img src="https://user-images.githubusercontent.com/112865106/224551563-916788e8-8d0c-44fe-adc2-9bba03477b97.png" width="100%" height="100%">
 
 
 🏠 ****MaeveInterior****
