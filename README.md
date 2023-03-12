@@ -59,4 +59,3 @@ De database die ik heb gebruikt voor mijn applicatie is [MongoDB](https://www.mo
 ----
 MIT License
 
-
