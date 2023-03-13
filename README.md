@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-![beeldreadme](https://user-images.githubusercontent.com/112865106/224110657-3446d8f0-1331-45cc-abd6-1244083d7810.png)
-<<<<<<< HEAD
-=======
 <img src="https://user-images.githubusercontent.com/112865106/224555254-c878121b-fe41-4734-880b-18f0494f37fc.png" width="100%" height="100%">
->>>>>>> 42f50096bdb5ae9863a4a0cbea69bd32d766303c
+
 
 
 🏠 ****MaeveInterior****
