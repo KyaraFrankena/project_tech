@@ -46,7 +46,7 @@ header img:nth-of-type(2)  {
 
 
 /* Inleidende tekst */
-main section:nth-of-type(1) h2 {
+main .welkomtekst h2 {
     font-family: Boowie;
     color: #435F50;
     font-size: 1.2em;
@@ -54,7 +54,7 @@ main section:nth-of-type(1) h2 {
     margin-top: 1.33em;
 }
 
-main section:nth-of-type(1) p {
+main .welkomtekst p {
     font-family: poppins;
     color: #435F50;
     font-size: .8em;
@@ -64,8 +64,11 @@ main section:nth-of-type(1) p {
 /* Einde inleidende tekst */
 
 
+
+
+
 /* Grid maken */
-main section:nth-of-type(2) ul {
+main .overzicht ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
@@ -77,22 +80,22 @@ main section:nth-of-type(2) ul {
 
 
 /* Grid indeling  */
-main section:nth-of-type(2) ul li:nth-of-type(1) {
+main .overzicht ul li:nth-of-type(1) {
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-main section:nth-of-type(2) ul li:nth-of-type(2) {
+main .overzicht ul li:nth-of-type(2) {
     grid-column-start: 2;
     grid-column-end: -1;
 }
 
-main section:nth-of-type(2) ul li:nth-of-type(3) {
+main .overzicht ul li:nth-of-type(3) {
     grid-column-start: 2;
     grid-column-end: -3;
 }
 
-main section:nth-of-type(2) ul li:nth-of-type(4) {
+main .overzicht ul li:nth-of-type(4) {
     grid-column-start: -2;
     grid-column-end: -1;
 }
@@ -100,19 +103,19 @@ main section:nth-of-type(2) ul li:nth-of-type(4) {
 
 
 /* Afbeeldingen scalen grid */
-main section:nth-of-type(2) ul li:nth-of-type(1) img:nth-of-type(2) {
+main  .overzicht ul li:nth-of-type(1) img:nth-of-type(2) {
     width: 100%;
 }
 
-main section:nth-of-type(2) ul li:nth-of-type(2) img:nth-of-type(2) {
+main  .overzicht ul li:nth-of-type(2) img:nth-of-type(2) {
     width: 100%;
 }
 
-main section:nth-of-type(2) ul li:nth-of-type(3) img:nth-of-type(2) {
+main  .overzicht ul li:nth-of-type(3) img:nth-of-type(2) {
     width: 100%;
 }
 
-main section:nth-of-type(2) ul li:nth-of-type(4) img:nth-of-type(2) {
+main  .overzicht ul li:nth-of-type(4) img:nth-of-type(2) {
     width: 100%;
 }
 /* Einde afbeeldingen scalen grid */
@@ -156,7 +159,7 @@ main section:nth-of-type(2) ul li:nth-of-type(4) img:nth-of-type(2) {
 
 
 /* Tekst op het grid */
-main section:nth-of-type(2) li:nth-of-type(1) div {
+main  .overzicht li:nth-of-type(1) div {
     position: absolute;
     left: 1em;
     width: 11.86em;
@@ -170,14 +173,14 @@ main section:nth-of-type(2) li:nth-of-type(1) div {
     font-family: poppins;
 }
 
-main section:nth-of-type(2) li:nth-of-type(1) div h3 {
+main  .overzicht li:nth-of-type(1) div h3 {
     font-family: Boowie;
     font-size: 1em;
     margin-top: 1em;
     margin-left: 1em;
 }
 
-main section:nth-of-type(2) li:nth-of-type(1) div p {
+main  .overzicht li:nth-of-type(1) div p {
     font-family: poppins;
     font-size: .8em;
     margin-top: 2.9em;
@@ -186,7 +189,7 @@ main section:nth-of-type(2) li:nth-of-type(1) div p {
 
 
 
-main section:nth-of-type(2) li:nth-of-type(2) div {
+main  .overzicht li:nth-of-type(2) div {
     position: absolute;
     left: 13.89em;
     width: 11.86em;
@@ -200,21 +203,21 @@ main section:nth-of-type(2) li:nth-of-type(2) div {
     font-family: poppins;
 }
 
-main section:nth-of-type(2) li:nth-of-type(2) div h3 {
+main  .overzicht li:nth-of-type(2) div h3 {
     font-family: Boowie;
     font-size: 1em;
     margin-top: 1em;
     margin-left: 1em;
 }
 
-main section:nth-of-type(2) li:nth-of-type(2) div p {
+main  .overzicht li:nth-of-type(2) div p {
     font-family: poppins;
     font-size: .8em;
     margin-top: 2.9em;
     margin-left: -8.6em;
 }
 
-main section:nth-of-type(2) li:nth-of-type(3) div {
+main  .overzicht li:nth-of-type(3) div {
     position: absolute;
     left: 1em;
     width: 11.86em;
@@ -228,21 +231,21 @@ main section:nth-of-type(2) li:nth-of-type(3) div {
     font-family: poppins;
 }
 
-main section:nth-of-type(2) li:nth-of-type(3) div h3 {
+main  .overzicht li:nth-of-type(3) div h3 {
     font-family: Boowie;
     font-size: 1em;
     margin-top: 1em;
     margin-left: 1em;
 }
 
-main section:nth-of-type(2) li:nth-of-type(3) div p {
+main  .overzicht li:nth-of-type(3) div p {
     font-family: poppins;
     font-size: .8em;
     margin-top: 2.9em;
     margin-left: -7.8em;
 }
 
-main section:nth-of-type(2) li:nth-of-type(4) div {
+main  .overzicht li:nth-of-type(4) div {
     position: absolute;
     left: 13.89em;
     width: 11.86em;
@@ -256,14 +259,14 @@ main section:nth-of-type(2) li:nth-of-type(4) div {
     font-family: poppins;
 }
 
-main section:nth-of-type(2) li:nth-of-type(4) div h3 {
+main  .overzicht li:nth-of-type(4) div h3 {
     font-family: Boowie;
     font-size: 1em;
     margin-top: 1em;
     margin-left: 1em;
 }
 
-main section:nth-of-type(2) li:nth-of-type(4) div p {
+main  .overzicht li:nth-of-type(4) div p {
     font-family: poppins;
     font-size: .8em;
     margin-top: 2.9em;

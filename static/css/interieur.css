@@ -49,7 +49,7 @@ header img:nth-of-type(2) {
 } 
 /* Einde standaard! */
 
-main h3 {
+main .tekstinterieur h3 {
     font-family: Boowie;
     background-color: white;
     padding-top: 2em;
@@ -60,7 +60,7 @@ main h3 {
     margin-left: 7em;
 }
 
-main p {
+main .tekstinterieur p {
     font-family: poppins;
     font-size: .75em;
     background-color: white;

@@ -1,4 +1,5 @@
 ![beeldreadme](https://user-images.githubusercontent.com/112865106/224110657-3446d8f0-1331-45cc-abd6-1244083d7810.png)
+<<<<<<< HEAD
 
 
 🏠 ****MaeveInterior****
@@ -59,3 +60,5 @@ De database die ik heb gebruikt voor mijn applicatie is [MongoDB](https://www.mo
 ----
 MIT License
 
+=======
+>>>>>>> db400a69ec80335387bc123c8797101eb4bf5a1a

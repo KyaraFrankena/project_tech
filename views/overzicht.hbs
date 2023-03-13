@@ -1,0 +1,78 @@
+<body>
+    <header>
+        <img src="./images/LOGO-MI-White.png" alt="LogoMI">     
+        <img src="./images/whiteheart.png" alt="Heart">   
+    </header>
+    
+ 
+
+    <main>
+       <section class="welkomtekst">
+            <h2>Hi there!</h2>
+            <p>Look around, find your inspiration and give it a like.</p>
+       </section>
+       <section class="overzicht">
+            <ul>
+                {{#each interiorList}}
+                    <li>
+                        <div>
+                            <h3> {{this.interieurName}}</h3>
+                            <p>{{this.interieurLocatie}}</p>
+                        </div>
+                        <img src="{{this.interieurImg}}"/>
+                        <form action="/likepagina" method="POST">
+                            <input type="hidden" name="item-id" value="{{this._id}}">
+                                {{#if this.liked}}
+                                    <button><img class="hartjevol" src="./images/fullheart3.png" alt="fullheart"></button>
+                                {{else}}
+                                     <button><img class="hartjeleeg" src="./images/emptyheart2.png" alt="emptyheart1"></button>
+                                {{/if}}
+                        </form>
+                    </li>
+                {{/each}}
+            </ul>
+
+<!--
+
+                <li>
+                    <div>
+                        <h3>Japandi en Klassiek</h3>
+                        <p>Woonkamer</p>
+                    </div>
+                    <img src="./images/Japandi-kopie.jpg" alt="Japandi"> 
+                    <form action="/likepagina" method="POST">
+                        <input type="hidden" name="item-id" value="1">
+                        <button><img class="hartjeoverzicht" src="./images/emptyheart2.png" alt="emptyheart1"></button>
+                    </form>
+                    {{!-- like-item wordt eventueel likepagina --}}
+                </li>
+                <li>
+                    <div>
+                        <h3>Cozy Cottage</h3>
+                        <p>Woonkamer</p>
+                    </div>
+                        <img class="leeghartje2" src="./images/emptyheart2.png" alt="emptyheart2">
+                        <img src="./images/chique3.jpg" alt="CozyCottage"> 
+                </li>
+                <li>
+                    <div>
+                        <h3>Scandinavian</h3>
+                        <p>Woonkamer</p>
+                    </div>
+                        <img class="leeghartje3" src="./images/emptyheart2.png" alt="emptyheart3">
+                        <img src="./images/Scandinavian.jpg" alt="Scandinavian"> 
+                </li>
+                <li>
+                    <div>
+                        <h3>Landelijk</h3>
+                        <p>Keuken</p>
+                    </div>
+                        <img class="leeghartje4" src="./images/emptyheart2.png" alt="emptyheart4">
+                        <img src="./images/Landelijk.jpg" alt="Landelijk"> 
+                </li>
+-->
+            </ul>
+       </section>
+    </main>  
+</body>
+</html>

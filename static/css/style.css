@@ -25,24 +25,31 @@
 /* Einde van gebruikte fonts */
 
 
+/* Standaard body */
 body {
     margin: 0;
+    background-color: #DAD7D0;
+}
+/* Einde standaard body */
+
+
+
+/* BEGIN LOADING PAGINA */
+/* Afbeeldingen + link loading pagina */
+main .achtergrondloading {
+    width: 26em;
+    height:48em;
 }
 
-main section:nth-of-type(1) img {
-    width: 27em;
-    height: 50em;
-}
-
-main section:nth-of-type(2) img {
+main .logolaad {
     width: 50%;
-    margin-top: -47em;
+    margin-top: -44em;
     margin-left: 6.5em;    
 }
 
 main section:nth-of-type(1) a {
     margin-left: 7em;
-    margin-top: 49em;
+    margin-top: 48em;
     background-color: #F5F1CC;
     color: black;
     font-size: .9em;
@@ -55,4 +62,502 @@ main section:nth-of-type(1) a {
     padding-bottom: 0.5em;
     font-family: BOOWIE;
     position: fixed;
+}
+/* Einde afbeeldingen + link loading pagina */
+
+
+/* Vaste header */
+header img:nth-of-type(1) {
+    width: 40%;
+    margin-top: 3em;
+    margin-left: 8.5em; 
+}
+
+header img:nth-of-type(2)  {
+    width:5%;
+    margin-left: 23em;
+    margin-top: -5.5em;
+} 
+/* Einde vaste header */
+/* EINDE LOADING PAGINA */
+
+
+
+/* BEGIN OVERZICHT PAGINA */
+/* Inleidende tekst */
+main .welkomtekst h2 {
+    font-family: Boowie;
+    color: #435F50;
+    font-size: 1.2em;
+    margin-left: 1em;
+    margin-top: 1.33em;
+}
+
+main .welkomtekst p {
+    font-family: poppins;
+    color: #435F50;
+    font-size: .8em;
+    margin-top: -1.2em;
+    margin-left: 1.55em;
+}
+/* Einde inleidende tekst */
+
+/* Grid maken */
+main .overzicht ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin-top: -1em;
+    list-style: none;
+    padding: 1em;
+
+}
+/* Einde grid maken */
+
+
+/* Grid indeling  */
+main .overzicht ul li:nth-of-type(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    /* display: inline-flex; */
+}
+
+main .overzicht ul li:nth-of-type(2) {
+    grid-column-start: 2;
+    grid-column-end: -1;
+    /* display: inline-flex; */
+}
+
+main .overzicht ul li:nth-of-type(3) {
+    grid-column-start: 2;
+    grid-column-end: -3;
+}
+
+main .overzicht ul li:nth-of-type(4) {
+    grid-column-start: -2;
+    grid-column-end: -1;
+}
+/* Einde grid indeling */
+
+
+/* Afbeeldingen scalen grid */
+/* main .overzicht ul li:nth-of-type(1) > img:nth-of-type(1) {
+    width: 100%;
+}
+main .overzicht ul li:nth-of-type(1) > img:nth-of-type(2) {
+    width: 100%;
+}
+
+main .overzicht ul li:nth-of-type(1) > img:nth-of-type(3) {
+    width: 100%;
+}
+
+main .overzicht ul li:nth-of-type(1) > img:nth-of-type(4) {
+    width: 100%;
+} */
+
+.overzicht img:nth-of-type(1) {
+    width: 100%;
+}
+
+/* Einde afbeeldingen scalen grid */
+
+
+/* Hartje positioneren */
+ form button .hartjeoverzicht {
+    width: 6%;
+    z-index: 1;
+    position:absolute;
+    margin-left: -1em;
+    margin-top:-.5em;
+    padding: 0;
+    cursor: pointer;
+} 
+
+.overzicht form button  {
+    background-color: transparent;
+    border: none;
+    margin-top: -19em;
+    margin-left: 10.5em;
+    width: 21%;
+    height: 9%;
+    
+}
+
+/* .overzicht button img {
+    background-image: url("../images/emptyheart2.png");
+} */
+
+input[type="checkbox"] {
+    content: url("../images/emptyheart2.png");
+    display: block;
+    width: 6%;
+    z-index: 1;
+    position: absolute;
+    margin-left: 11em;
+    margin-top: 1em;
+}
+input[type="checkbox"]:checked {
+    content: url("../images/fullheart-kleur.png");
+}
+.native-hidden {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+
+
+/* .leeghartje2 {
+    width: 6%;
+    z-index: 1;
+    position:absolute;
+    margin-left: 9.2em;
+    margin-top:1em;
+}
+
+.leeghartje3 {
+    width: 6%;
+    z-index: 1;
+    position:absolute;
+    margin-left: 9.2em;
+    margin-top:1em;
+}
+
+.leeghartje4 {
+    width: 6%;
+    z-index: 1;
+    position:absolute;
+    margin-left: 9.2em;
+    margin-top:1em;
+}  */
+/* Einde hartje positioneren */
+
+
+/* Tekst op het grid */
+main .overzicht li:nth-of-type(1) div {
+    position: absolute;
+    left: 0.98em;
+    width: 11.45em;
+    height: 3.75em;
+    display: flex;
+    background-color: white;
+    opacity: .8;
+    top: 24em;
+    z-index: 1;
+    color: black;
+    font-family: poppins;
+}
+
+main .overzicht li:nth-of-type(1) div h3 {
+    font-family: Boowie;
+    font-size: 1em;
+    margin-top: .9em;
+    margin-left: 1em;
+}
+
+main .overzicht li:nth-of-type(1) div p {
+    font-family: poppins;
+    font-size: .8em;
+    margin-top: 2.5em;
+    margin-left: -11.2em;
+}
+
+main .overzicht li:nth-of-type(2) div {
+    position: absolute;
+    left: 13.42em;
+    width: 11.45em;
+    height: 3.75em;
+    display: flex;
+    background-color: white;
+    opacity: .8;
+    top: 24em;
+    z-index: 1;
+    color: black;
+    font-family: poppins;
+}
+
+main .overzicht li:nth-of-type(2) div h3 {
+    font-family: Boowie;
+    font-size: 1em;
+    margin-top: .9em;
+    margin-left: 1em;
+}
+
+main .overzicht li:nth-of-type(2) div p {
+    font-family: poppins;
+    font-size: .8em;
+    margin-top: 2.5em;
+    margin-left: -8.6em;
+}
+
+main .overzicht li:nth-of-type(3) div {
+    position: absolute;
+    left: 1em;
+    width: 11.45em;
+    height: 3.95em;
+    display: flex;
+    background-color: white;
+    opacity: .8;
+    top: 42.2em;
+    z-index: 1;
+    color: black;
+    font-family: poppins;
+}
+
+main .overzicht li:nth-of-type(3) div h3 {
+    font-family: Boowie;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+main .overzicht li:nth-of-type(3) div p {
+    font-family: poppins;
+    font-size: .8em;
+    margin-top: 2.9em;
+    margin-left: -7.8em;
+}
+
+main .overzicht li:nth-of-type(4) div {
+    position: absolute;
+    left: 13.45em;
+    width: 11.45em;
+    height: 3.95em;
+    display: flex;
+    background-color: white;
+    opacity: .8;
+    top: 42.2em;
+    z-index: 1;
+    color: black;
+    font-family: poppins;
+}
+
+main .overzicht li:nth-of-type(4) div h3 {
+    font-family: Boowie;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+main .overzicht li:nth-of-type(4) div p {
+    font-family: poppins;
+    font-size: .8em;
+    margin-top: 2.9em;
+    margin-left: -5.6em;
+}
+/* Einde tekst op het grid */
+/* EINDE OVERZICHT PAGINA */
+
+
+/* BEGIN LIKEPAGINA */
+/* Inleidende tekst */
+main .uitlegtekst h2 {
+    font-family: Boowie;
+    color: #435F50;
+    font-size: 1.2em;
+    margin-left: 1em;
+    margin-top: 1.33em;
+}
+
+main .uitlegtekst p {
+    font-family: poppins;
+    color: #435F50;
+    font-size: .8em;
+    margin-top: -1.2em;
+    margin-left: 1.55em;
+}
+/* Einde inleidende tekst */
+
+
+/* Grid maken */
+main .overzichtlikes ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin: 0;
+    list-style: none;
+    padding: 1em;
+}
+/* Einde grid maken */
+
+
+/* Grid indeling  */
+main .overzichtlikes ul li:nth-of-type(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+main .overzichtlikes ul li:nth-of-type(2) {
+    grid-column-start: 2;
+    grid-column-end: -1;
+}
+/* Einde grid indeling */
+
+
+/* Afbeeldingen scalen grid */
+main .overzichtlikes ul li:nth-of-type(1) img:nth-of-type(2) {
+    width: 100%;
+}
+
+main .overzichtlikes ul li:nth-of-type(2) img:nth-of-type(2) {
+    width: 100%;
+}
+/* Einde afbeeldingen scalen grid */
+
+
+/* Hartje positioneren */
+.gevuldhartje {
+    width: 6%;
+    z-index: 1;
+    position:absolute;
+    margin-left: 9.2em;
+    margin-top:1em;
+}
+
+.gevuldhartje2 {
+    width: 6%;
+    z-index: 1;
+    position:absolute;
+    margin-left: 9.2em;
+    margin-top:1em;
+}
+/* Einde hartje positioneren */
+
+
+/* Tekst op het grid */
+main .overzichtlikes li:nth-of-type(1) div {
+    position: absolute;
+    left: 1em;
+    width: 11.86em;
+    height: 4.5em;
+    display: flex;
+    background-color: white;
+    opacity: .8;
+    top: 26.45em;
+    z-index: 1;
+    color: black;
+    font-family: poppins;
+}
+
+main .overzichtlikes li:nth-of-type(1) div h3 {
+    font-family: Boowie;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+main .overzichtlikes li:nth-of-type(1) div p {
+    font-family: poppins;
+    font-size: .8em;
+    margin-top: 2.9em;
+    margin-left: -10.8em;
+}
+
+main .overzichtlikes li:nth-of-type(2) div {
+    position: absolute;
+    left: 13.89em;
+    width: 11.86em;
+    height: 4.5em;
+    display: flex;
+    background-color: white;
+    opacity: .8;
+    top: 26.45em;
+    z-index: 1;
+    color: black;
+    font-family: poppins;
+}
+
+main .overzichtlikes li:nth-of-type(2) div h3 {
+    font-family: Boowie;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+main .overzichtlikes li:nth-of-type(2) div p {
+    font-family: poppins;
+    font-size: .8em;
+    margin-top: 2.9em;
+    margin-left: -8.6em;
+}
+/* Einde tekst op het grid */
+
+/* Link naar nieuwe likes kiezen */
+main section:nth-of-type(3) a {
+    margin-left: 5.5em;
+    margin-top: 5em;
+    background-color: white;
+    color: black;
+    font-size: .9em;
+    border: none;
+    opacity: 0.8;
+    border-radius: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-family: BOOWIE;
+    position: fixed;
+}
+/* Einde link naar nieuwe likes kiezen */
+/* EINDE LIKEPAGINA */
+
+
+/* BEGIN INTERIEURINFO */
+main .interieurinfo {
+    width: 27em;
+    height: 50em;
+    background-color: #DAD7D0;
+    margin-top: -20em;
+    position: absolute;
+    z-index: -1;
+
+}
+
+main .tekstinterieur h3 {
+    font-family: Boowie;
+    background-color: white;
+    padding-top: 2em;
+    padding-left: 1.5em;
+    opacity: .8;
+    margin-bottom: 0;
+    margin-top: 11em;
+    margin-left: 7em;
+}
+
+main .tekstinterieur p {
+    font-family: poppins;
+    font-size: .75em;
+    background-color: white;
+    padding-left: 2.3em;
+    padding-top: 1em;
+    padding-bottom: 23.8em;
+    padding-right: 1.5em;
+    opacity: .8;
+    margin-top: 0;
+    margin-left: 10.9em;
+}
+
+.teksthartje {
+    width: 5%;
+    margin-left: 23em;
+    margin-top: 2.2em;
+    z-index: 2;
+    position: absolute;
+}
+/* EINDE INTERIEURINFO */
+
+
+/* .hartjeleeg {
+    width:10%;
+} */
+
+.overzicht form .hartjeleeg {
+    width:7%;
+    z-index: 100;
+    position: absolute;
+    margin-left: -2em;
+    
 }
