@@ -44,8 +44,10 @@ De applicatie is gebouwd voor **mobile screens** only (iphone XR)
 Clone mijn repository 
 * ```git clone https://github.com/KyaraFrankena/project_tech.wiki.git```
 
-Installeer NPM
+Installeer NPM en Node.js
 * Typ in je terminal (zodra je je in de juiste map bevind) ```npm install```
+* Typ in je terminal (zodra je je in de juiste map bevind) ```node install```
+* Typ in je terminal (zodra je je in de juiste map bevind) ```node --version```
 
 Start node op
 * Typ in je terminal ```npm start```
