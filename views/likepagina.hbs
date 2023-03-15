@@ -1,42 +1,28 @@
 <body>
     <header>
         <img src="./images/LOGO-MI-White.png" alt="LogoMI">     
-        <img src="./images/whiteheart.png" alt="Heart">   
+        <a href="likepagina"><img src="./images/whiteheart.png" alt="Heart"></a>
     </header>
-
     <main>
        <section class="uitlegtekst">
             <h2>Your likes.</h2>
             <p>A overview from the interieur inspiration that you gave a like.</p>
        </section>
-       <section class="overzichtlikes">
+       <section class="overzicht">
             <ul>
-                <li>
-                    <a href="">
+                {{#each likedStyles}}
+                    <li>
                         <div>
-                            <h3>Japandi en Klassiek</h3>
-                            <p>Woonkamer</p>
+                            <h3>{{this.interieurName}}</h3>
+                            <p>{{this.interieurLocatie}}</p>
                         </div>
-                        <img class="gevuldhartje" src="./images/fullheart-kleur.png" alt="emptyheart1">
-                        <img src="./images/Scandinavian.jpg" alt="Japandi"> 
-                        
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div>
-                            <h3>Cozy Cottage</h3>
-                            <p>Woonkamer</p>
-                        </div>
-                        <img class="gevuldhartje2" src="./images/fullheart-kleur.png" alt="emptyheart2">
-                        <img src="./images/Landelijk.jpg" alt="CozyCottage"> 
-                    </a>
-                </li>
+                        <img src="{{this.interieurImg}}"/>
+                    </li>
+                {{/each}}
             </ul>
        </section>
        <section>
-        <a href="overzicht.html">Add new interieur inspiration</a>
+        <a href="overzicht">Add new interieur inspiration</a>
        </section>
     </main>
 </body>
-</html>

@@ -3,7 +3,7 @@ const express = require ('express');
 const app = express();
 const path = require("path");
 const { engine } = require('express-handlebars');
-const PORT = process.env.PORT || 1337; 
+const PORT = process.env.PORT || 3000; 
 
 require('dotenv').config({ path: '.env'});
 
@@ -15,7 +15,7 @@ app.set("views", "./views");
 app.use(express.urlencoded({ extended: true }));
 
 
-// installatie mongodb (backend)
+// installatie mongodb (backend) (source: Janno voor code over installatie MongoDB)
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const { ObjectId } = require('mongodb');
 const uri = process.env.DB_CONNECTION_STRING;
@@ -28,53 +28,78 @@ client.connect()
 .then((res) => console.log ('@@-- connection established'))
 .catch((err) => console.log ('@@-- error', err))
 
-app.get('/', (req,res) => {
-    res.render('index.hbs');
-});
 
+// app.get voor index, instellingen voor api.
+app.get('/', (req,res) => {
+    let quote;
+    let options = {
+      method: 'GET',
+      headers: { 'x-api-key': process.env.API_KEY }
+    }
+    let url = 'https://api.api-ninjas.com/v1/quotes?category=home'
+    
+    fetch(url, options) // fetch is async but api is await, fixed issue where data wasn't seen in view (source: Ivo Nijhuis)
+            .then(res => res.json()) // parse response as JSON
+            .then(data => {
+              quote = data;
+              console.log(quote);
+              res.render('index.hbs', {title: 'MaeveInterior - Home', quote: quote[0].quote, author: quote[0].author}); 
+            })
+            .catch(err => {
+                console.log(`error ${err}`)
+      }); 
+  })
+  
+
+// app.get voor overzicht, halen van info uit database, hulp van sonja
 app.get('/overzicht', async (req, res) => {
     // logic db call -> template aanroepen -> de data meegeven aan de template ||
     const collection = client.db ('MaeveInterior').collection('interior');
     const interiorList = await collection.find ({}).toArray();
-    
+
     res.render("overzicht.hbs",  {interiorList});
 })
 
-
-app.get('/interieurinfo', (req, res) => {
-    res.render("interieurinfo.hbs");
+//(source: Philip hulp bij like true/false)
+app.get('/likepagina', async (req, res) => {
+    // haal alle gelikde beelden op uit db
+    const collection = client.db ('MaeveInterior').collection('interior');
+    const likedStyles = await collection.find({liked: true}).toArray();
+    res.render('likepagina.hbs', {likedStyles});
+    console.log(likedStyles)
 })
 
-app.get('/likepagina', (req, res) => {
-    res.render("likepagina.hbs", {
-
-    });
-})
-
-
-app.post('/likepagina', async (req, res) => {  
+//(source: Philip - studentassistent)
+app.post('/likepagina',  async (req, res) => {  
     console.log('@@-- REQ. body', req.body);
     try {
-        //like in de database opslaan
+        // definieër collection en filter
         const collection = client.db ('MaeveInterior').collection('interior');
-        const filter = {_id: ObjectId(req.body.item-id)}
-        const updateDoc = { 
-            $set: {
-                liked: "false"
-            },
-        } 
-        const result = await collection.updateOne(filter, updateDoc);
+        const filter = {_id: new ObjectId(req.body.itemid)}
 
-        // haal lijst voor overzicht uit db en toon
-        const interiorList = await collection.find ({}).toArray();
-        res.render("overzicht.hbs",  {interiorList});
+        // zoek inspiratie beeld uit db
+        const inspiratieBeeld = await collection.findOne(filter);
+        
+        // wanneer inspiratie beeld geliked unlike anders like
+        if (inspiratieBeeld.liked) {
+            const result = await collection.updateOne(filter, {$set: {liked: false}});
+        } else {
+            const result = await collection.updateOne(filter, {$set: {liked: true}});
+        }
+        // redirect naar overzicht pagina
+        res.redirect('/overzicht');
         } 
     catch (e) {
         console.log(e)
     }
-    // saveLikeTDatabase(req.body.id)
-    // like-item eventueel vervangen door likepagina
-})
+});
+
+// app.use voor 404 error state
+app.use((req, res) => { // error handler, style in css
+    res.status(404);
+    res.render('404.hbs', {title: 'MaeveInterior - 404 page not found'});
+  });
+
 
 app.listen(PORT, () => {
     console.log(`Running on port ${PORT}`)
