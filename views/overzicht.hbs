@@ -1,7 +1,7 @@
 <body>
     <header>
-        <img src="./images/LOGO-MI-White.png" alt="LogoMI">     
-        <a href="likepagina"><img src="./images/whiteheart.png"></a>
+        <img src="/images/LOGO-MI-White.png" alt="LogoMI">     
+        <a href="likepagina"><img src="/images/whiteheart.png"></a>
     </header>
     <main>
        <section class="welkomtekst">
@@ -12,17 +12,19 @@
             <ul>
                 {{#each interiorList}}
                     <li>
-                        <div>
-                            <h3> {{this.interieurName}}</h3>
-                            <p>{{this.interieurLocatie}}</p>
-                        </div>
-                        <img src="{{this.interieurImg}}"/>
+                        <a href="interieurinfo/{{this._id}}">{{interior}}
+                            <div>
+                                <h3>{{this.interieurName}}</h3>
+                                <p>{{this.interieurLocatie}}</p>
+                            </div>
+                            <img src="{{this.interieurImg}}"/>
+                        </a>
                         <form action="/likepagina" method="POST">
                             <input type="hidden" name="itemid" value="{{this._id}}">
                                 {{#if this.liked}}
-                                    <button><img class="hartjevol" src="./images/fullheart3.png" alt="fullheart"></button>
+                                    <button><img class="hartjevol" src="/images/fullheart3.png" alt="fullheart"></button>
                                 {{else}}
-                                    <button><img class="hartjeleeg" src="./images/emptyheart2.png" alt="emptyheart1"></button>
+                                    <button><img class="hartjeleeg" src="/images/emptyheart2.png" alt="emptyheart1"></button>
                                 {{/if}}
                         </form>
                     </li>
@@ -33,5 +35,5 @@
     <footer>
         <p>Rechten onder voorbehoudt van MaeveInterior. - 2023.</p>
     </footer>
-    <script src="/static/script/java.js"></script>
+    <script src="/script/java.js"></script>
 </body>

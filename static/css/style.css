@@ -380,3 +380,49 @@ footer p {
     padding-left: 8em;
 }
 /* EINDE FOOTER */
+
+
+
+/* BEGIN INTERIEURINFO */
+main .interieurinfo {
+    width: 27em;
+    height: 50em;
+    background-color: #DAD7D0;
+    margin-top: -20em;
+    position: absolute;
+    z-index: -1;
+
+}
+
+main .tekstinterieur h3 {
+    font-family: Boowie;
+    background-color: white;
+    padding-top: 2em;
+    padding-left: 1.5em;
+    opacity: .8;
+    margin-bottom: 0;
+    margin-top: 11em;
+    margin-left: 7em;
+}
+
+main .tekstinterieur p {
+    font-family: poppins;
+    font-size: .75em;
+    background-color: white;
+    padding-left: 2.3em;
+    padding-top: 1em;
+    padding-bottom: 23.8em;
+    padding-right: 1.5em;
+    opacity: .8;
+    margin-top: 0;
+    margin-left: 10.9em;
+}
+
+.teksthartje {
+    width: 5%;
+    margin-left: 23em;
+    margin-top: 2.2em;
+    z-index: 2;
+    position: absolute;
+}
+/* EINDE INTERIEURINFO */

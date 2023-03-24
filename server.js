@@ -71,7 +71,10 @@ app.get('/likepagina', async (req, res) => {
 
 //(source: Philip - studentassistent)
 app.post('/likepagina',  async (req, res) => {  
-    console.log('@@-- REQ. body', req.body);
+    // console.log('@@-- REQ. body', req.body);
+
+    console.log(JSON.parse(JSON.stringify(req.body)))
+
     try {
         // definieër collection en filter
         const collection = client.db ('MaeveInterior').collection('interior');
@@ -88,18 +91,32 @@ app.post('/likepagina',  async (req, res) => {
         }
         // redirect naar overzicht pagina
         res.redirect('/overzicht');
-        } 
+        }   
     catch (e) {
         console.log(e)
     }
 });
+
+app.get ('/interieurinfo/:id', async (req,res) => {
+    const collection2 = client.db ('MaeveInterior').collection('detailinformatie');
+    const interiorList = await collection.find ({}).toArray();
+    
+    console.log ('@@-test', req.params.id)
+    console.log('i run')
+
+
+    res.render('interieurinfo.hbs')
+    // res.redirect('/interieurinfo');
+})
+
+
+res.render("overzicht.hbs",  {interiorList});
 
 // app.use voor 404 error state
 app.use((req, res) => { // error handler, style in css
     res.status(404);
     res.render('404.hbs', {title: 'MaeveInterior - 404 page not found'});
   });
-
 
 app.listen(PORT, () => {
     console.log(`Running on port ${PORT}`)
