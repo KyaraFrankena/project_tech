@@ -38,7 +38,7 @@ app.get('/', (req,res) => {
     }
     let url = 'https://api.api-ninjas.com/v1/quotes?category=home'
     
-    fetch(url, options) // fetch is async but api is await, fixed issue where data wasn't seen in view (source: Ivo Nijhuis)
+    fetch(url, options) // fetch is async but api is await,(source: Ivo Nijhuis)
             .then(res => res.json()) // parse response as JSON
             .then(data => {
               quote = data;
@@ -97,20 +97,27 @@ app.post('/likepagina',  async (req, res) => {
     }
 });
 
+//ID toevoegen bij click op interieurbeeld (route parameter)
 app.get ('/interieurinfo/:id', async (req,res) => {
-    const collection2 = client.db ('MaeveInterior').collection('detailinformatie');
-    const interiorList = await collection.find ({}).toArray();
-    
-    console.log ('@@-test', req.params.id)
-    console.log('i run')
+    try {
+        console.log ('@@-test', req.params.id)
+    //console.log('i run')
 
+    //collectie ophalen uit database
+    const informationCollection = client.db ('MaeveInterior').collection('interior');
 
-    res.render('interieurinfo.hbs')
-    // res.redirect('/interieurinfo');
+    //zoeken database in combinatie met id
+    const objectID = new ObjectId(req.params.id);
+
+    // een id vinden uit de database
+    const style = await informationCollection.findOne({_id: objectID});
+    console.log(style);
+
+    res.render('interieurinfo.hbs', {style});
+    } catch (err) {
+        console.log(err);
+    }
 })
-
-
-res.render("overzicht.hbs",  {interiorList});
 
 // app.use voor 404 error state
 app.use((req, res) => { // error handler, style in css

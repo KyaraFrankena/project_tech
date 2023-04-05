@@ -1,20 +1,18 @@
 <body>
     <header>
         <img src="/images/LOGO-MI-White.png" alt="LogoMI">     
-        <a href="likepagina"><img src="/images/whiteheart.png"></a>
+        <a href="/likepagina"><img src="/images/whiteheart.png"></a>
+        <a href="/overzicht"><img src="/images/back.png" class="goback"></a>
     </header>
     <main>
-        <section>
-             <img src="{{this.interieurImg}}"> 
-            <img class="interieurinfo" src="/images/Scandinavian.jpg" alt="informatie">
-        </section>
+        <section class="meerinformatie">
+            <img src="{{style.detailImg}}">        
         <section class="tekstinterieur">
-            <img class="teksthartje" src="/images/emptyheart-kleur.png" alt="teksthartje">
-            <h3>Scandinavian style.</h3>
-            <p>Je houdt ervan of je vindt het helemaal niets, de Scandinavische style.
-            Het biedt een rustige omgeving die voor vrijwel elke doelgroep gangbaar kan zijn.
-            Door het gebruik van natuurlijke kleuren in combinatie met hout en zachte tinten in de meubels
-            geeft het een rustige sfeer. </p>  
+            <h3>{{style.detailName}}</h3>
+            <p>{{style.detailTekst}}</p>  
         </section>
     </main>
+    <footer class="infofooter">
+        <p>Rechten onder voorbehoudt van MaeveInterior. - 2023.</p>
+    </footer>
 </body>
